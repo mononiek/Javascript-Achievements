@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Healthbar</title>
+    </head>
+    <body>
+        <progress id='hitting' min=0 max=250 name=Health value=240></progress>
+        <button id='button'>Oof!</button>
+        <script>
+            document.getElementById('button').addEventListener('click',function(){
+                document.getElementById('hitting').value-=15
+                if (document.getElementById('hitting').value==0) {
+                    document.getElementById('Player').innerHTML='Game Over!'}
+            })       
+        </script>
+        <h1 id='Player'>Ohw no I'm getting hit!</h1>
+    </body>
+</html>
